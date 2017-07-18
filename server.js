@@ -8,8 +8,7 @@ const data = require("./app/data/friends")
 const app = express();
 const PORT = process.env.PORT || 3000;
 //path to html files
-const homePath = path.join(__dirname + "/app/public/" + "home.html")
-const surveyPath = path.join(__dirname + "/app/public/" + "survey.html")
+data.setup();
 //set up body parsser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -21,16 +20,9 @@ app.use(bodyParser.json({
 }));
 //all routes functions get called
 
-app.use("/home", htmlRoutes.getHomePage);
-app.use("/survey", htmlRoutes.getSurveyPage)
-app.use("/", htmlRoutes.getHomePage)
+app.use("/", htmlRoutes)
+app.use("/api", apiRoutes)
 //turn on app to liten on port
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 });
-
-module.exports={
-    app: app,
-    homePath: homePath,
-    surveyPath: surveyPath
-  }
