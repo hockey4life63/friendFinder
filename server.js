@@ -9,6 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 //path to html files
 data.setup();
+data.getFriends();
 //set up body parsser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -18,6 +19,8 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({
     type: "application/vnd.api+json"
 }));
+//setup static files for css and client js
+app.use("/public",express.static(path.join(__dirname,"app/public")))
 //all routes functions get called
 
 app.use("/", htmlRoutes)

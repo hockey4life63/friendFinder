@@ -12,33 +12,9 @@ router.use(bodyParser.json({
 }));
 router.post("/friends", function (req, res) {
   let newFriend = req.body;
-  let allFriends = friendsData.getFriends();
-  let difference = [];
-  console.log(allFriends)
-  //loop thru all the currend people in friends 
-  for(let i = 0; i<allFriends.length;i++){
-    let total = 0;
-    for(let k =0; k<newFriend.scores.length; k++){
-      //compare to the newFriend being added
-      console.log(newFriend.scores[k], allFriends[i].scores[k])
-      total+=Math.abs(newFriend.scores[k]-allFriends[i].scores[k]);
-    }
-  }
-  //find the min score
-  let min;
-  for(let i = 0;i<difference.length; i++){
-    if(i === 0){
-      min = i;
-    } else {
-      if(difference[i]<difference[min]){
-        min = i;
-      }
-    }
-  }
-  let closestMatch = allFriends[min];
-  friendsData.addFriend(newFriend);
-  console.log(closestMatch,"min", min, "diff", difference)
-  res.json(closestMatch);
+  
+  res.json(friendsData.checkFriends(newFriend));
+  friendsData.addFriend(newFriend)
 })
 router.get("/friends", function (req, res) {
   res.json(friendsData.getFriends())

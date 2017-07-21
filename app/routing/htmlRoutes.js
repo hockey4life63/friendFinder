@@ -5,17 +5,17 @@ const surveyPath = path.join(__dirname + "/../public/" + "survey.html")
 const router = express.Router();
 
   router.get("/", function (req,res) {
-      // res.sendFile(homePath);
-      console.log(homePath)
-      res.send("home page")
+      res.sendFile(homePath);
+      // console.log(homePath)
+      // res.send("home page")
     })
   router.get("/home", function (req,res) {
-      // res.sendFile(homePath);
-      res.send("home page")
+      res.sendFile(homePath);
+      // res.send("home page")
     })
   router.get("/survey",function (req, res) {
-      // res.sendFile(surveyPath);
-      res.send("survey page")
+      res.sendFile(surveyPath);
+      // res.send("survey page")
     })
 
   module.exports= router;

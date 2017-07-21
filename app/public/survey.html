@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--Import Google Icon Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    <div class="container">
+    <div class="card-panel teal">
+        <h1 class="header center orange-text">Coder Survey</h1>
+        <h5>All questions on scale of 1-5</h5>
+      </div>
+      <div>
+        <form>
+          <div class="row">
+            <div class="col s12">
+              Enter Your Name:
+              <div class="input-field inline">
+                <input id="name" type="name" class="validate">
+                
+              </div>
+            </div>
+            <div class="row">
+            <div class="col s12">
+              Enter a link to your photo:
+              <div class="input-field inline">
+                <input id="photo" type="photo" class="validate">
+                
+              </div>
+            </div>
+          </div>
+            <div class="input-field col s12">
+              <select id="q0">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+                <option value="5"> 5</option>
+              </select>
+              <label>How much do you enjoy working on front-ends</label>
+            </div>
+            <div class="input-field col s12">
+              <select id="q1">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+                <option value="5"> 5</option>
+              </select>
+              <label>How much do you enjoy working on back-ends</label>
+            </div>
+            <div class="input-field col s12">
+              <select id="q2">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+                <option value="5"> 5</option>
+              </select>
+              <label>How often do you "git push"</label>
+            </div>
+            <div class="input-field col s12">
+              <select id="q3">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+                <option value="5"> 5</option>
+              </select>
+              <label>How often do you "git pull"</label>
+            </div>
+            <div class="input-field col s12">
+              <select id="q4">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+                <option value="5"> 5</option>
+              </select>
+              <label>How good are you at working on back-ends</label>
+            </div>
+            <div class="input-field col s12">
+              <select id="q5">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+                <option value="5"> 5</option>
+              </select>
+              <label>How good are you at working on front-ends</label>
+            </div>
+            <div class="input-field col s12">
+              <select id="q6">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+                <option value="5"> 5</option>
+              </select>
+              <label>How WET does your code get</label>
+            </div>
+            <div class="input-field col s12">
+              <select id="q7">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+                <option value="5"> 5</option>
+              </select>
+              <label>How often do you code alone for pleasure</label>
+            </div>
+            <div class="input-field col s12">
+              <select id="q8">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+                <option value="5"> 5</option>
+              </select>
+              <label>Your prefered amount of partners while coding</label>
+            </div>
+            <div class="input-field col s12">
+              <select id="q9">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+                <option value="5"> 5</option>
+              </select>
+              <label>How often do you practice using safe user input</label>
+            </div>
+          </div>
+        </form>
+        <div class="col s4 offset-s4 center-align"><a class="waves-effect waves-light btn-large" id="submit">Submit Survey</a></div>
+        <div class="row">
+            <div class="col s2 ">
+              <a class="waves-effect waves-teal btn-flat" href="/api/friends">API Coders List</a>
+            </div>
+            <div class="col s2 ">
+              <a class="waves-effect waves-teal btn-flat" href="https://github.com/hockey4life63/friendFinder">Github</a>
+            </div>
+      </div>
+      </div>
+      <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Your Match</h4>
+        <div class="row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="" id="match-photo">
+              <span class="card-title" id="match-name">Test Name Here</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+    </div>
+    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/public/survey.js">
+    </script>
+  </body>
+</html>
