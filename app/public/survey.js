@@ -27,8 +27,9 @@ $("select").material_select();
         // AJAX post the data to the friends API. 
         if(isValid){
           $.post(currentURL + "/api/friends", friendObj, function(data){
-                  $("match-name").text(data.name);
-                  $("match-photo").attr("src", data.photo);
+            console.log(data)
+                  $("#match-name").text(data.name);
+                  $("#match-photo").attr("src", data.photo);
                   $("#modal1").modal("open");
                 });
         }
